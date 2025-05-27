@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+
+#header {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #333;
+    font-size: 0.875rem;
+    min-height: 100vh;
+    position: relative;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+/*コンテンツの幅*/
+
+.wrapper {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.content {
+    padding-top: 120px;
+    padding-bottom: 160px;
+}
+
+.site-title a {
+    width: 400px;
+    line-height: 1px;
+    display: block;
+}
+
+.page-title {
+    font-size: 0.875rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+
+
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+/*ハンバーガーメニュー*/
+
+
+#navi {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    color: #fff;
+    padding: 36px 50px;
+    transition: all 1.0s;
+    z-index: 20;
+    opacity: 0;
+  }
+  #navi a {
+    color: #fff;
+  }
+  #navi li {
+    margin-bottom: 14px;
+  }
+  /*
+  ハンバーガーメニュー
+  メニューが開いている時は、「left: 0;」「opacity: 1;」で
+  画面左に表示する
+  */
+  .open #navi {
+    left: 0;
+    opacity: 1;
+  }
+  .toggle_btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+
+
+  /*ハンバーガーメニューの線の設定（メニューが閉じている時）*/
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 4px;
+    transition: all 0.5s;
+  }
+
+
+  /*一本めの位置*/
+  .toggle_btn span:nth-child(1) {
+    top: 10px;
+  }
+
+  /*二本め*/
+
+  .toggle_btn span:nth-child(2) {
+    bottom: 10px;
+  }
+
+
+/*ハンバーガー動き*/
+
+.open .toggle_btn span {
+    background-color: #fff;
+}
+
+.open .toggle_btn span:nth-child(1) {
+    -webkit-transform: translateY(4px) rotate(-45deg);
+    transform: translateY(4px) rotate(-45deg);
+}
+
+
+.open .toggle_btn span:nth-child(2) {
+    -webkit-transform: translateY(-4px) rotate(45deg);
+    transform: translateY(-4px) rotate(45deg);
+}
+
+#mask {
+    display: none;
+    transition: all 0.5s;
+}
+
+.open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+#top {
+    padding-top: 80px;
+    padding-bottom: 160px;
+  }
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+
+  .section-title {
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+  }
+
+  .product-list img {
+    margin-bottom: 10px;
+    vertical-align: top;
+  }
+  .product-list p {
+    font-size: 0.75rem;
+  }
+  .link-text {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .pagination li {
+    padding: 0 20px;
+}
+
+ 
+.product {
+    display: flex;
+    margin-bottom: 180px;
+}
+  
+.product .section-title {
+    font-weight: normal;
+    line-height: 1;
+}
+
+
+#product1 .section-title {
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+}
+
+#product2 .section-title {
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+}
+
+#product3 .section-title {
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+}
+
+#product4 .section-title {
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+}
+
+#product5 .section-title {
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+}
+
+#item {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  #item .item-text {
+    width: 42%
+  }
+
+
+
+  #item .item-text p {
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  #item .item-text dl {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #item .item-text dt {
+    width: 30%;
+  }
+  #item .item-text dd {
+    width: 70%;
+  }
+  #item .item-img {
+    width: 50%;
+}
+
+
+
+#footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 80px 80px 30px 30px;
+}
+#footer .inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+}
+#footer .copyright {
+    font-size: 0.625rem;
+    text-align: center
+}
