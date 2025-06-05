@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
+    /*position: fixed;*/
     left: 0;
     right: 0;
     z-index: 10;
@@ -44,17 +44,11 @@ li {
 }
 
 
-
-
-
-
-
-
 /*コンテンツの幅*/
 
 .wrapper {
     width: 100%;
-    max-width: 1360px;
+    max-width: 1920px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -221,8 +215,10 @@ img {
 
  
 .product {
+    max-width: 800px;
     display: flex;
-    margin-bottom: 180px;
+    justify-content: space-between;
+    margin-bottom: 60px;
 }
   
 .product .section-title {
@@ -338,3 +334,61 @@ img {
     font-size: 0.625rem;
     text-align: center
 }
+
+@media screen and (max-width: 900px) {
+  
+    /*-------------------------------------------
+    TOP、PRODUCTS
+    -------------------------------------------*/
+    .product-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 20px;
+    }
+  
+    /*-------------------------------------------
+    ITEM
+    -------------------------------------------*/
+    #item {
+      flex-direction: column;
+    }
+    #item .item-text {
+      width: 100%;
+    }
+    #item .item-img {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    /*-------------------------------------------
+    COMPANY
+    -------------------------------------------*/
+    #company dl {
+      flex-direction: column;
+    }
+    #company dt {
+      width: 100%;
+      border-bottom: none;
+      padding-bottom: 5px;
+    }
+    #company dd {
+      width: 100%;
+      padding-top: 5px;
+    }
+  
+    /*-------------------------------------------
+    フッター
+    -------------------------------------------*/
+    #footer {
+      flex-direction: column;
+    }
+    #footer .menu {
+      margin-bottom: 5px;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 5px;
+    }
+  }
