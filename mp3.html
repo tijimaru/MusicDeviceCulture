@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="テキスト">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="move.js"></script>
-    <title>Walkman</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="テキスト">
+  <link rel="stylesheet" href="https://use.typekit.net/lit7drp.css">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="move.js"></script>
+  <title>Walkman</title>
 </head>
+
 <body>
-    <header id="header" class="wrapper">
-        <h1 class="site-title">
-            <a href="index.html"><img src="images/icon.png" alt="MusicDeviceCulture"></a>
-        </h1>
+  <header id="header" class="wrapper">
+    <h1 class="site-title">
+      <a href="index.html">MusicDeviceCulture</a>
+    </h1>
 
-        <nav id="navi">
-            <ul class="nav-menu">
-                <li><a href="index.html#productlist">ProductList</a></li>
-                <li><a href="history.html">音楽の聞き方の変化</a></li>
-                <li><a href="about.html">about</a></li>
-            </ul>
-        </nav>
+    <nav id="navi">
+      <ul class="nav-menu">
+        <li><a href="index.html#productlist">ProductList</a></li>
+        <li><a href="history.html">音楽の聞き方の変化</a></li>
+        <li><a href="about.html">about</a></li>
+      </ul>
+    </nav>
 
-        <div class="toggle_btn">
-            <span></span>
-            <span></span>
+    <div class="toggle_btn">
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="mask"></div>
+
+  </header>
+  <main>
+    <div class="wrapper">
+      <h2 class="page-title">MP3Player</h2>
+      <div id="item">
+        <div class="item-img">
+          <img src="images/MP3player.webp" alt="MP3PlayerVisual">
         </div>
-
-        <div id="mask"></div>
-
-    </header>
-    <main>
-        <div class="content wrapper">
-          <h2 class="page-title">MP3Player</h2>
-          <div id="item">
-            <div class="item-img">
-              <img src="images/MP3player.webp" alt="MP3PlayerVisual">
-            </div>
-            <div class="item-text">
-              <p>
-                MP3プレーヤーは、音楽ファイルをデジタルで保存・再生できる携帯型オーディオ機器です。MP3をはじめとする圧縮形式に対応しており、
-                小さな容量で多くの楽曲を持ち運べるのが最大の特徴です。軽量でコンパクトなデザインが多く、通勤・通学・運動中など、場所を選ばず気軽に音楽を楽しめる点が魅力です。
-                また、パソコンと接続して簡単に曲を転送できるほか、モデルによっては録音機能やFMラジオ、Bluetooth接続にも対応しています。シンプルな使い勝手とコスパの良さから、
-                スマホとは別に音楽専用機として今も根強い人気があります。
-              </p>
-              <p>
-                SONYのウォークマンは、高音質・高機能・信頼性の3点に集約されます。長年オーディオ分野をリードしてきたSONYならではの技術により、
-                ウォークマンは圧縮音源だけでなくハイレゾ音源にも対応し、クリアで臨場感のある音を持ち運べることが魅力です。加えて、ノイズキャンセリングやDSEE（高音域補完技術）など、
-                音をより良く聴くための独自機能が充実しています。バッテリー持ちも良く、専用音楽プレーヤーとしてスマートフォンよりも集中して音楽を楽しめる点もポイントです。デザインも洗練されており、
-                「音楽を大切に聴きたい人」にとって、ウォークマンは今も選ばれる価値ある一台です。
-              </p>
-              <p>
-                <li><a href="https://www.sony.jp/walkman/gallery/" target="_blank">SONY公式サイト</a></li>
-                <li><a href="https://search.rakuten.co.jp/search/mall/sony+walkman/" target="_blank">Rakuten</a></li>
-                <li><a href="https://www.amazon.co.jp/s?k=sony+%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%9E%E3%83%B3&crid=3V4XPH4ZTG97I&sprefix=sony+%2Caps%2C194&ref=nb_sb_ss_ts-doa-p_2_5" target="_blank">Amazon</a></li>
-              </p>
-            </div>
-          </div>
-          <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/54HvXt9pWS4?si=r1UY3c2zS33Zc94k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-          <a class="link-text" href="index.html#productlist">Back To Products</a>
+        <div class="item-text">
+          <p>
+            MP3プレーヤーは、音楽ファイルをデジタルで保存・再生できる携帯型オーディオ機器です。MP3をはじめとする圧縮形式に対応しており、
+            小さな容量で多くの楽曲を持ち運べるのが最大の特徴です。軽量でコンパクトなデザインが多く、通勤・通学・運動中など、場所を選ばず気軽に音楽を楽しめる点が魅力です。
+            また、パソコンと接続して簡単に曲を転送できるほか、モデルによっては録音機能やFMラジオ、Bluetooth接続にも対応しています。シンプルな使い勝手とコスパの良さから、
+            スマホとは別に音楽専用機として今も根強い人気があります。
+          </p>
+          <p>
+            SONYのウォークマンは、高音質・高機能・信頼性の3点に集約されます。長年オーディオ分野をリードしてきたSONYならではの技術により、
+            ウォークマンは圧縮音源だけでなくハイレゾ音源にも対応し、クリアで臨場感のある音を持ち運べることが魅力です。加えて、ノイズキャンセリングやDSEE（高音域補完技術）など、
+            音をより良く聴くための独自機能が充実しています。バッテリー持ちも良く、専用音楽プレーヤーとしてスマートフォンよりも集中して音楽を楽しめる点もポイントです。デザインも洗練されており、
+            「音楽を大切に聴きたい人」にとって、ウォークマンは今も選ばれる価値ある一台です。
+          </p>
+          <p>
+            <li><a href="https://www.sony.jp/walkman/gallery/" target="_blank">・SONY公式サイト</a></li>
+            <li><a href="https://search.rakuten.co.jp/search/mall/sony+walkman/" target="_blank">・Rakuten</a></li>
+            <li><a
+                href="https://www.amazon.co.jp/s?k=sony+%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%E3%83%9E%E3%83%B3&crid=3V4XPH4ZTG97I&sprefix=sony+%2Caps%2C194&ref=nb_sb_ss_ts-doa-p_2_5"
+                target="_blank">・Amazon</a>
+            </li>
+          </p>
         </div>
-    </main>
-    <footer id="footer" class="wrapper">
-        <ul class="menu">
-            <li><a href="https://www.instagram.com/eps__1/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com/@Tijimaru" target="_blank">YouTube</a></li>
-        </ul>
-        <p class="copyright">&copy;MusicDeviceCulture</p>
-    </footer>
+      </div>
+      <div class="video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/54HvXt9pWS4?si=r1UY3c2zS33Zc94k"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <a class="link-text" href="index.html#productlist">Back To Products</a>
+    </div>
+  </main>
+  <footer id="footer" class="wrapper">
+    <ul class="menu">
+      <li><a href="https://www.instagram.com/eps__1/" target="_blank">Instagram</a></li>
+      <li><a href="https://www.youtube.com/@Tijimaru" target="_blank">YouTube</a></li>
+    </ul>
+    <p class="copyright">&copy;MusicDeviceCulture</p>
+  </footer>
 </body>
+
 </html>
